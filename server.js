@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 // search all products
 app.get('/products', async (req, res) => {
     try {
-        
         const products = await Product.find({})
         res.status(200).json({ products })
     } catch (error) {
